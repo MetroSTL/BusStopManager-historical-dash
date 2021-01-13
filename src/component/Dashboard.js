@@ -11,7 +11,7 @@ export default function Dashboard(props) {
     const {token} = props;
 
     return (
-        <div>
+        <div className='w-100 flex' id='dashboard'>
             <AllStops token={token} setStopSelection={setStopSelection} />
             <StopHistory stopSelection={stopSelection} setGlobalId={setGlobalId} />
             <SurveyRecord globalId={globalId} />

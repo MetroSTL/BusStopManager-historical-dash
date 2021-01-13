@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+#sign-in{
+  background-color: transparent;
+  border-color: transparent;
+}
+#top-bar {
+  height: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+#top-bar img {
+  width: 40px;
+  padding: 0;
+  margin: 0;
+}
+#dashboard {
+  height: 90vh;
+}
+.panel{
+  height: 100%;
+  width: 34%;
+  border-right: 2px solid #9a9ea7;
+  border-top: 2px solid #9a9ea7;
+}

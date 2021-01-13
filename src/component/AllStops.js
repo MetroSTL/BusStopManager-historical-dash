@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 function AllStops() {
 
     return (
-        <div>
+        <div className='panel'>
             
         </div>
     )

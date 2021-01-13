@@ -1,4 +1,5 @@
 import './App.css';
+import './tailwind.min.css'
 import React, {useState, useEffect} from 'react';
 import loginIcon from './assets/login.svg';
 import Dashboard from './component/Dashboard';
@@ -30,24 +31,20 @@ function App() {
 
   useEffect(() => {
     setToken(load());
-    if(signedIn){
-      
-    }
 
-  }, [])
+    getRecords(token)
+  })
 
   return (
     <div className="App">
-      <div id="top-bar" class="w-100 flex">
+      <div id="top-bar" class="w-100 flex my-4 p-4">
           <h3>{signedIn ? user : '' }</h3>
 
-          <button id="sign-in" class="w-20 items-center ml-auto" onClick={getToken}>
-              <img id="sign-in-icon" src={loginIcon} alt='signin' />
+          <button id="sign-in" class="flex w-20 ml-auto" onClick={getToken}>
+              <img id="sign-in-icon" src={loginIcon} alt='signin'  />
           </button>
       </div>
-      <div id='dashboard'>
         <Dashboard token={token} />
-      </div>
     </div>
   );
 }
