@@ -9,6 +9,7 @@ function App() {
   const [signedIn, setSignedIn] = useState(false);
   const [user, setUser] = useState('');
   const [token, setToken] = useState('');
+  const [stops, setStops] = useState([]);
   
   const load = () => {
     const fullHash = document.location.hash.split('#')[1];
