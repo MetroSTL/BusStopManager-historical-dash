@@ -3,13 +3,12 @@ import './tailwind.min.css'
 import React, {useState, useEffect} from 'react';
 import loginIcon from './assets/login.svg';
 import Dashboard from './component/Dashboard';
-import getRecords from './hooks/getRecords';
+import MetroLogo from './assets/metrologo.png'
 
 function App() {
   const [signedIn, setSignedIn] = useState(false);
   const [user, setUser] = useState('');
   const [token, setToken] = useState('');
-  const [stops, setStops] = useState([]);
   
   const load = () => {
     const fullHash = document.location.hash.split('#')[1];
@@ -32,13 +31,11 @@ function App() {
 
   useEffect(() => {
     setToken(load());
-
-    getRecords(token)
-  })
+  }, [token])
 
   return (
     <div className="App">
-      <div id="top-bar" class="w-100 flex my-4 p-4">
+      <div id="top-bar" class="w-100 flex my-4 p-4 justify-between">
           <h3>{signedIn ? user : '' }</h3>
 
           <button id="sign-in" class="flex w-20 ml-auto" onClick={getToken}>

@@ -47,12 +47,18 @@
   overflow: hidden;
 }
 #top-bar img {
-  width: 40px;
+  max-height: 40px;
   padding: 0;
   margin: 0;
 }
-#dashboard {
-  height: 90vh;
+.dashboard {
+  height: 80vh;
+}
+.search {
+  height: 10vh;
+  min-height: 50px;
+  border-top: 2px solid #9a9ea7;
+
 }
 .panel{
   height: 100%;
