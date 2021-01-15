@@ -17,6 +17,10 @@ export default function Dashboard(props) {
 
     // page load
     useEffect(async () => {
+        setStopIDHistory([])
+        setStopSelection('')
+        setGlobalId('')
+        setStops([])
     }, [])
     
     // updated search
@@ -28,8 +32,8 @@ export default function Dashboard(props) {
 
     // click on AllStops
     useEffect(async () => {
-        console.log(await stopSelection)
-        setStopIDHistory(await filterRecords(token, await stopSelection) )
+        setStopIDHistory(await filterRecords(token, stopSelection) )
+
     }, [stopSelection])
     
     return (
