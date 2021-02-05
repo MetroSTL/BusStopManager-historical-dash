@@ -10,7 +10,7 @@ export default function Dashboard(props) {
     const [search, setSearch] = useState('');
     const [stopSelection, setStopSelection] = useState('');
     const [stopIDHistory, setStopIDHistory] = useState('');
-    const [globalId, setGlobalId] = useState('');
+    const [surveyDetails, setSurveyDetails] = useState('');
     const [stops, setStops] = useState([]);
     
     const {token} = props;
@@ -19,15 +19,15 @@ export default function Dashboard(props) {
     useEffect(async () => {
         setStopIDHistory([])
         setStopSelection('')
-        setGlobalId('')
+        setSurveyDetails('')
         setStops([])
     }, [])
     
     // updated search
     useEffect(async () => {
-        if(search.length > 2){
-            setStops(await getRecords(token, search))
-        }
+        search.length > 2? 
+            setStops(await getRecords(token, search)) : 
+            setStops([])
     }, [search])
 
     // click on AllStops
@@ -42,9 +42,9 @@ export default function Dashboard(props) {
                 <Search setSearch={setSearch} />
             </div>
             <div className='flex dashboard'>
-                <AllStops token={token} setStopSelection={setStopSelection} stops={stops} />
-                <StopHistory stopIDHistory={stopIDHistory} setGlobalId={setGlobalId} />
-                <SurveyRecord globalId={globalId} />
+                <AllStops token={token} setStopSelection={setStopSelection} setSurveyDetails={setSurveyDetails} stops={stops} />
+                <StopHistory stopIDHistory={stopIDHistory} setSurveyDetails={setSurveyDetails} />
+                <SurveyRecord surveyDetails={surveyDetails} />
 
             </div>
         </div>

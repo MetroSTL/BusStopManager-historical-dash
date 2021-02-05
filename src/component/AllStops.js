@@ -2,11 +2,12 @@ import React, {useState, useEffect} from 'react'
 import {LocationOn, LocationOff} from '@material-ui/icons';
 
 function AllStops(props) {
-    const {stops, setStopSelection} = props;
+    const {stops, setStopSelection, setSurveyDetails} = props;
 
     async function onClick(stopid) {
         console.log(stopid)
         setStopSelection(stopid);
+        setSurveyDetails('')
     } 
 
     useEffect(async() => {

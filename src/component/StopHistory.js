@@ -2,10 +2,11 @@ import React, {useState, useEffect} from 'react'
 import formatDate from './formatDate';
 
 export default function StopHistory(props){
-    const {stopIDHistory, setGlobalId} = props;
+    const {stopIDHistory, setSurveyDetails} = props;
 
-    function onClick(e) {
-
+    const onClick = (stop) => {
+        console.log(stop)
+        setSurveyDetails(stop)
     }
 
     useEffect(async() => {
@@ -18,7 +19,7 @@ export default function StopHistory(props){
             {stopIDHistory ?
             stopIDHistory.map(stop=>{
                     return (
-                        <li key={stop.attributes.stop_id} className='item flex flex-column border-b-2 py-6 m-0 w-100' onClick={e=>onClick(stop.attributes.stopid)}>
+                        <a key={stop.attributes.stop_id} className='item flex flex-column border-b-2 py-6 m-0 w-100' onClick={e=>onClick(stop)}>
                             
                             <li className='flex flex-column mx-auto text-left w-5/6 px-2'>
                                 <ul>
@@ -33,7 +34,7 @@ export default function StopHistory(props){
                                     </li>
                                 </ul>
                             </li>
-                        </li>
+                        </a>
                 )}) :
             ''
             }

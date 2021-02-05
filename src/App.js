@@ -26,7 +26,7 @@ function App() {
   const getToken = () => {
     var redirectUri = `${process.env.REACT_APP_REDIRECT_URI}`;
     var clientID = `${process.env.REACT_APP_ID}`;
-    window.location.href = 'https://metroas08.metrostlouis.org/arcgis/sharing/rest/oauth2/authorize?client_id=' + clientID + '&response_type=token&redirect_uri=' + window.encodeURIComponent(redirectUri) + 'oauth-window' +'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes';
+    window.location.href = 'https://maps.metrostlouis.org/arcgis/sharing/rest/oauth2/authorize?client_id=' + clientID + '&response_type=token&redirect_uri=' + window.encodeURIComponent(redirectUri) + 'oauth-window' +'height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes';
   };
 
   useEffect(() => {
