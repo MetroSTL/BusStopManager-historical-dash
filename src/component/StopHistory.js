@@ -10,7 +10,7 @@ export default function StopHistory(props){
     }
 
     useEffect(async() => {
-        console.log("AllStops", await stopIDHistory)
+        console.log("StopHistoryID", await stopIDHistory)
       }, [stopIDHistory])
 
     return (
