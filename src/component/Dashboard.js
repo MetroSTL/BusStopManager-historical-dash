@@ -36,18 +36,12 @@ export default function Dashboard(props) {
 
     }, [stopSelection])
 
-    const updateSearch =(e, data) => {
-        e.preventDefault()
-        if(data == ''){
-            setStopIDHistory('')
-        }
-        setSearch(data)
-    }
+
     
     return (
         <div className='' >
             <div className='w-100 flex search'>
-                <Search setSearch={e=>setSearch(e)} />
+                <Search setSearch={setSearch} setStopIDHistory={setStopIDHistory} />
             </div>
             <div className='flex dashboard'>
                 <AllStops token={token} setStopSelection={setStopSelection} setSurveyDetails={setSurveyDetails} stops={stops} />
