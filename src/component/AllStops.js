@@ -5,7 +5,6 @@ function AllStops(props) {
     const {stops, setStopSelection, setSurveyDetails} = props;
 
     async function onClick(stopid) {
-        console.log(stopid)
         setStopSelection(stopid);
         setSurveyDetails('')
     } 

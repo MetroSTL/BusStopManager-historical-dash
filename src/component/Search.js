@@ -2,12 +2,12 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 
 
-export function Search(props) {
+export function Search({setSearch}) {
     
     function textInput(e) {
         e.preventDefault()
         console.log(e)
-        props.setSearch(e.target.value)
+        setSearch(e.target.value)
     }
 
     return (
