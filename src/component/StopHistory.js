@@ -30,7 +30,7 @@ export default function StopHistory(props){
                                         <b>StopName: </b> {stop.attributes.stop_name} 
                                     </li>
                                     <li className='flex flex-row '>
-                                        <b>Last Edit: </b> {`${formatDate(new Date(stop.attributes.last_edited_date))}`} 
+                                        <b>Last Edit: </b> {`${formatDate(stop.attributes.last_edited_date)}`} 
                                     </li>
                                 </ul>
                             </li>

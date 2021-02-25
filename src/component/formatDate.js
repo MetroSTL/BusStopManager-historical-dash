@@ -1,5 +1,6 @@
-export default function formatDate(date) {
-
+export default function formatDate(d) {
+    let date = new Date(d)
+    
     // Format day/month/year to two digits
     var formattedDate = ('0' + date.getDate()).slice(-2);
     var formattedMonth = ('0' + (date.getMonth() + 1)).slice(-2);
