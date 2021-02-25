@@ -13,7 +13,8 @@ export default function Dashboard(props) {
     const [stopIDHistory, setStopIDHistory] = useState('');
     const [surveyDetails, setSurveyDetails] = useState('');
     const [stops, setStops] = useState([]);
-    const [showSurvey, setShowSurvey] = useState(false)
+    const [showSurvey, setShowSurvey] = useState(false);
+    const [surveyURL, setSurveyURL] = useState('');
     
     const {token} = props;
 
@@ -48,8 +49,8 @@ export default function Dashboard(props) {
             <div className='flex dashboard'>
                 <AllStops token={token} setStopSelection={setStopSelection} setSurveyDetails={setSurveyDetails} stops={stops} />
                 <StopHistory stopIDHistory={stopIDHistory} setSurveyDetails={setSurveyDetails} />
-                <SurveyRecord surveyDetails={surveyDetails} setShowSurvey={setShowSurvey} />
-                {showSurvey ? <PopupSurvey /> : ''}
+                <SurveyRecord surveyDetails={surveyDetails} setShowSurvey={setShowSurvey} setSurveyURL={setSurveyURL} surveyURL={surveyURL} token={token}/>
+                {showSurvey ? <PopupSurvey surveyURL={surveyURL}/> : ''}
 
             </div>
         </div>
