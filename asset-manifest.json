@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/historical-dash/static/css/main.98a7dca1.chunk.css",
+    "main.js": "/historical-dash/static/js/main.8f814ab4.chunk.js",
+    "main.js.map": "/historical-dash/static/js/main.8f814ab4.chunk.js.map",
+    "runtime-main.js": "/historical-dash/static/js/runtime-main.afcc8ad3.js",
+    "runtime-main.js.map": "/historical-dash/static/js/runtime-main.afcc8ad3.js.map",
+    "static/js/2.a5075154.chunk.js": "/historical-dash/static/js/2.a5075154.chunk.js",
+    "static/js/2.a5075154.chunk.js.map": "/historical-dash/static/js/2.a5075154.chunk.js.map",
+    "static/js/3.07ffcab3.chunk.js": "/historical-dash/static/js/3.07ffcab3.chunk.js",
+    "static/js/3.07ffcab3.chunk.js.map": "/historical-dash/static/js/3.07ffcab3.chunk.js.map",
+    "index.html": "/historical-dash/index.html",
+    "static/css/main.98a7dca1.chunk.css.map": "/historical-dash/static/css/main.98a7dca1.chunk.css.map",
+    "static/js/2.a5075154.chunk.js.LICENSE.txt": "/historical-dash/static/js/2.a5075154.chunk.js.LICENSE.txt",
+    "static/media/login.c1b9acc4.svg": "/historical-dash/static/media/login.c1b9acc4.svg",
+    "static/media/metrologo.2030a298.png": "/historical-dash/static/media/metrologo.2030a298.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.afcc8ad3.js",
+    "static/js/2.a5075154.chunk.js",
+    "static/css/main.98a7dca1.chunk.css",
+    "static/js/main.8f814ab4.chunk.js"
+  ]
+}
