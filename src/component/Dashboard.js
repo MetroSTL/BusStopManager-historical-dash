@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import AllStops from './AllStops'
 import StopHistory from './StopHistory'
 import SurveyRecord from './SurveyRecord'
+import PopupSurvey from './PopupSurvey'
 import Search from './Search'
 import getRecords from '../hooks/getRecords';
 import filterRecords from '../hooks/filterRecords'
@@ -12,6 +13,7 @@ export default function Dashboard(props) {
     const [stopIDHistory, setStopIDHistory] = useState('');
     const [surveyDetails, setSurveyDetails] = useState('');
     const [stops, setStops] = useState([]);
+    const [showSurvey, setShowSurvey] = useState(false)
     
     const {token} = props;
 
@@ -46,7 +48,8 @@ export default function Dashboard(props) {
             <div className='flex dashboard'>
                 <AllStops token={token} setStopSelection={setStopSelection} setSurveyDetails={setSurveyDetails} stops={stops} />
                 <StopHistory stopIDHistory={stopIDHistory} setSurveyDetails={setSurveyDetails} />
-                <SurveyRecord surveyDetails={surveyDetails} />
+                <SurveyRecord surveyDetails={surveyDetails} setShowSurvey={setShowSurvey} />
+                {showSurvey ? <PopupSurvey /> : ''}
 
             </div>
         </div>

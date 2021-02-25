@@ -4,7 +4,6 @@ import React, {useState, useEffect} from 'react';
 import Dashboard from './component/Dashboard';
 import TopBar from './component/TopBar';
 
-
 function App() {
   const [signedIn, setSignedIn] = useState(false);
   const [user, setUser] = useState('');

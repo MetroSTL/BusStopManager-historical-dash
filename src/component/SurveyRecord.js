@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
-import Button from '@material-ui/core/Button'
 
-export default function SurveyRecord(props) {
-    const {surveyDetails} = props;
+export default function SurveyRecord({surveyDetails, setShowSurvey}) {
+    const openSurvey = (globalID) => {
+        document.getElementById('popup-survey').setAttribute('display', 'block')
+    }
 
     return (
         <div className='panel'>
@@ -11,10 +12,10 @@ export default function SurveyRecord(props) {
             <div>
                 <h3><b>Stop ID: </b>{surveyDetails.attributes.stop_id}</h3>
                 <h3><b>Stop Name: </b>{surveyDetails.attributes.stop_name}</h3>
-                <h3><b>Bench: </b>{surveyDetails.attributes.stop_id}</h3>
-                <h3><b>Shelter: </b>{surveyDetails.attributes.stop_id}</h3>
+                <h3><b>Bench: </b>{surveyDetails.attributes.bench}</h3>
+                <h3><b>Shelter: </b>{surveyDetails.attributes.shelter}</h3>
                 <h3><b>Last Edit Date: </b>{surveyDetails.attributes.last_edited_date}</h3>
-                <Button color='secondary'>Full Survey</Button>
+                <button className='' onClick={e=>setShowSurvey(true)}>Full Survey</button>
             </div>
             }
         </div>
