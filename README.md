@@ -1,12 +1,42 @@
-# Getting Started with Create React App
+
+# Historical Dashboard Documentation
+
+The purpose of this application is to inspect past inspections. The way that it works is it sends out requests for a particular stop id. It checks the Stops and Ghost stops file on the open data store. Brings back all of the matches and displays them on the first panel. When you click on the panel all of the entries in the bus stop manager main feature service returns. When you click on one of those it then shows the results of that survey and you can open up a read-only version of the survey for inspection.
+
+## getRecords() is where the requests are made
+
+- [MetroBusStops_REGISTERED](https://maps.metrostlouis.org/arcgis/home/item.html?id=0e86eeb07c924b5497639870cdb8192e) (Bus Stop Feature Service)
+- [MetroBusGhostStops_REGISTERED](https://maps.metrostlouis.org/arcgis/home/item.html?id=4f8abd9b058f4efeb7d6f8d643e723e7) (Ghost Bus Stop Feature Service)
+- [Application Information](https://maps.metrostlouis.org/arcgis/home/item.html?id=9640284533ff41cea8ab9477bca157af) (REACT_APP_ID and REACT_APP_REDIRECT_URI env variable locations)
+- Portal = https://maps.metrostlouis.org/arcgis
+
+## Update URI
+When you go to host this on a hosted website you will need to update the uri on the [Application Information](https://maps.metrostlouis.org/arcgis/home/item.html?id=9640284533ff41cea8ab9477bca157af) by going to settings and click update to update the uri appliction. You will want to add in the location in where it is hosted. You need to do this so you can connect the authorization system.
+
+![register_info.PNG](register_info.PNG)
+
+## ArcGIS Security and authentication
+
+[Serverless web app workflow
+](https://developers.arcgis.com/documentation/security-and-authentication/oauth-2.0/serverless-web-apps/)
+
+
+# React App Documentation
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Software Requirements
+
+install npm and node => [https://www.npmjs.com/get-npm](https://www.npmjs.com/get-npm)
+
+
+### Setup on new machine
+
+### `npm install` => installs all the npm libraries in the development folder
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm start` => ***Starts the App***
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,12 +44,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
+### `npm run build` => ***Builds the application***
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,42 +54,6 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
 ### Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
