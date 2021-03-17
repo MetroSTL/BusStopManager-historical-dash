@@ -50,8 +50,10 @@ export default function Dashboard(props) {
                 <AllStops token={token} setStopSelection={setStopSelection} setSurveyDetails={setSurveyDetails} stops={stops} />
                 <StopHistory stopIDHistory={stopIDHistory} setSurveyDetails={setSurveyDetails} />
                 <SurveyRecord surveyDetails={surveyDetails} setShowSurvey={setShowSurvey} setSurveyURL={setSurveyURL} surveyURL={surveyURL} token={token}/>
-                {showSurvey ? <PopupSurvey surveyURL={surveyURL} setShowSurvey={setShowSurvey} /> : ''}
-
+                {showSurvey ? 
+                    <PopupSurvey surveyURL={surveyURL} setShowSurvey={setShowSurvey} /> :
+                    ''
+                }
             </div>
         </div>
     )

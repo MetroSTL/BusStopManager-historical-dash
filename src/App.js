@@ -10,10 +10,9 @@ function App() {
   const [token, setToken] = useState('');
   
 
-
   return (
     <div className="App">
-        <TopBar signedIn={signedIn} user={user} token={token} setUser={setUser} setSignedIn={setSignedIn} setToken={setToken} />
+        <TopBar signedIn={signedIn} user={user}  setUser={setUser} token={token} setSignedIn={setSignedIn} setToken={setToken} />
         <Dashboard token={token} />
     </div>
   );
